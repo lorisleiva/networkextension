@@ -1,0 +1,28 @@
+<div>
+<!-- netcomp extension -->
+
+<!-- CORE terms removed, see data/schema.rdf file on github: -->
+<!-- schemaorg/schemaorg/data/schema.rdfa -->
+
+<!-- EXTENSION CONTENT FOLLOWS -->
+
+    <!-- Classes -->
+
+    <div typeof="rdfs:Class" resource="http://schema.org/_ClassName">
+        <span class="h" property="rdfs:label">_ClassName</span>
+        <span property="rdfs:comment">_Something.</span>
+        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/_SubClassName">_SubClassName</a></span>
+        <link property="http://schema.org/isPartOf" href="todoDefinedUrl" />
+    </div>
+
+    <!-- Properties -->
+
+    <div typeof="rdf:Property" resource="http://schema.org/_propertyName">
+        <span class="h" property="rdfs:label">_propertyName</span>
+        <span property="rdfs:comment">_Something.</span>
+        <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/_Domain">_Domain</a></span>
+        <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/_Range">_Range</a></span>
+        <link property="http://schema.org/inverseOf" href="http://schema.org/_inverseProperty"/>
+        <link property="http://schema.org/isPartOf" href="todoDefinedUrl" />
+    </div>
+</div>
