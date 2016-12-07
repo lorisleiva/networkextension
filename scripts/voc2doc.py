@@ -9,15 +9,18 @@ websiteFolder = '../networkextension-website/'
 def createClassPage(c, voc):
     pass
 
-def outputPage(page, filename):
+def outputPage(tpl, filename, **kwargs):
+    global templateFolder
     global websiteFolder
+
+    page = template(templateFolder + tpl, kwargs)
     with open(websiteFolder + filename, 'w') as out:
         out.write(page)
 
 if __name__ == '__main__':
     voc = getVocabulary()
 
-    outputPage(template(templateFolder + 'index', title='Hello World!'), 'test-index.html')
+    outputPage('index', 'test-index.html', title='title')
 
     for c in voc.classes:
         createClassPage(voc.classes[c], voc)
