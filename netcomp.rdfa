@@ -8,13 +8,6 @@
 
 	<!-- Classes -->
 
-	<div typeof="rdfs:Class" resource="http://schema.org/EndPointComponent">
-		<link property="http://schema.org/isPartOf" href="http://example.org" />
-		<span class="h" property="rdfs:label">EndPointComponent</span>
-		<span property="rdfs:comment">This class represents any type of end-points present in a computer network. E.g.: an IP address, a device or a file.</span>
-		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/NetworkComponent">NetworkComponent</a></span>
-	</div>
-
 	<div typeof="rdfs:Class" resource="http://schema.org/IpAddress">
 		<link property="http://schema.org/isPartOf" href="http://example.org" />
 		<span class="h" property="rdfs:label">IpAddress</span>
@@ -29,20 +22,27 @@
 		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Thing">Thing</a></span>
 	</div>
 
-	<!-- Properties -->
-
-	<div typeof="rdfs:Property" resource="http://schema.org/ipv4">
+	<div typeof="rdfs:Class" resource="http://schema.org/EndPointComponent">
 		<link property="http://schema.org/isPartOf" href="http://example.org" />
-		<span class="h" property="rdfs:label">ipv4</span>
-		<span property="rdfs:comment">The IPV4 address of the host</span>
-		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/IpAddress">IpAddress</a></span>
-		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+		<span class="h" property="rdfs:label">EndPointComponent</span>
+		<span property="rdfs:comment">This class represents any type of end-points present in a computer network. E.g.: an IP address, a device or a file.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/NetworkComponent">NetworkComponent</a></span>
 	</div>
+
+	<!-- Properties -->
 
 	<div typeof="rdfs:Property" resource="http://schema.org/ipv6">
 		<link property="http://schema.org/isPartOf" href="http://example.org" />
 		<span class="h" property="rdfs:label">ipv6</span>
 		<span property="rdfs:comment">The IPV6 address of the host</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/IpAddress">IpAddress</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/ipv4">
+		<link property="http://schema.org/isPartOf" href="http://example.org" />
+		<span class="h" property="rdfs:label">ipv4</span>
+		<span property="rdfs:comment">The IPV4 address of the host</span>
 		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/IpAddress">IpAddress</a></span>
 		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
 	</div>
