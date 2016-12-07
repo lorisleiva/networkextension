@@ -6,23 +6,45 @@
 
 <!-- EXTENSION CONTENT FOLLOWS -->
 
-    <!-- Classes -->
+	<!-- Classes -->
 
-    <div typeof="rdfs:Class" resource="http://schema.org/_ClassName">
-        <span class="h" property="rdfs:label">_ClassName</span>
-        <span property="rdfs:comment">_Something.</span>
-        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/_SubClassName">_SubClassName</a></span>
-        <link property="http://schema.org/isPartOf" href="todoDefinedUrl" />
-    </div>
+	<div typeof="rdfs:Class" resource="http://schema.org/EndPointComponent">
+		<link property="http://schema.org/isPartOf" href="http://example.org" />
+		<span class="h" property="rdfs:label">EndPointComponent</span>
+		<span property="rdfs:comment">This class represents any type of end-points present in a computer network. E.g.: an IP address, a device or a file.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/NetworkComponent">NetworkComponent</a></span>
+	</div>
 
-    <!-- Properties -->
+	<div typeof="rdfs:Class" resource="http://schema.org/IpAddress">
+		<link property="http://schema.org/isPartOf" href="http://example.org" />
+		<span class="h" property="rdfs:label">IpAddress</span>
+		<span property="rdfs:comment">Represent an host with an IP Address</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/EndPointComponent">EndPointComponent</a></span>
+	</div>
 
-    <div typeof="rdf:Property" resource="http://schema.org/_propertyName">
-        <span class="h" property="rdfs:label">_propertyName</span>
-        <span property="rdfs:comment">_Something.</span>
-        <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/_Domain">_Domain</a></span>
-        <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/_Range">_Range</a></span>
-        <link property="http://schema.org/inverseOf" href="http://schema.org/_inverseProperty"/>
-        <link property="http://schema.org/isPartOf" href="todoDefinedUrl" />
-    </div>
-</div>
+	<div typeof="rdfs:Class" resource="http://schema.org/NetworkComponent">
+		<link property="http://schema.org/isPartOf" href="http://example.org" />
+		<span class="h" property="rdfs:label">NetworkComponent</span>
+		<span property="rdfs:comment">A network component is any type of class that falls under the netcomp extension.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Thing">Thing</a></span>
+	</div>
+
+	<!-- Properties -->
+
+	<div typeof="rdfs:Property" resource="http://schema.org/ipv4">
+		<link property="http://schema.org/isPartOf" href="http://example.org" />
+		<span class="h" property="rdfs:label">ipv4</span>
+		<span property="rdfs:comment">The IPV4 address of the host</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/IpAddress">IpAddress</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/ipv6">
+		<link property="http://schema.org/isPartOf" href="http://example.org" />
+		<span class="h" property="rdfs:label">ipv6</span>
+		<span property="rdfs:comment">The IPV6 address of the host</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/IpAddress">IpAddress</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+<div>

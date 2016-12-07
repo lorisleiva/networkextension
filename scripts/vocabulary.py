@@ -1,5 +1,5 @@
 class SemanticElement:
-    def __init__(self, name, comment = ''):
+    def __init__(self, name, comment = None):
         self.name = name
         self.comment = comment
 
@@ -11,9 +11,9 @@ class SemanticElement:
         return self.name + "\n\t>> " + self.comment
 
 class Class(SemanticElement):
-    def __init__(self, name, comment = '', parents = []):
+    def __init__(self, name, comment = None):
         super().__init__(name, comment);
-        self.parents = parents
+        self.parents = []
 
     def addParent(self, className):
         self.parents.append(className)
@@ -23,10 +23,10 @@ class Class(SemanticElement):
         return "Class " + super().__repr__() + "\n\t>> subClassOf: " + ', '.join(self.parents)
         
 class Property(SemanticElement):
-    def __init__(self, name, comment = '', domains = [], ranges = []):
+    def __init__(self, name, comment = None):
         super().__init__(name, comment);
-        self.domains = domains
-        self.ranges = ranges
+        self.domains = []
+        self.ranges = []
         self.inverseOf = None
 
     def addDomain(self, domainName):
@@ -37,7 +37,7 @@ class Property(SemanticElement):
         self.ranges.append(rangeName)
         return self
 
-    def addInverseOf(self, inverseOf):
+    def setInverseOf(self, inverseOf):
         self.inverseOf = inverseOf
         return self
 
@@ -74,6 +74,10 @@ class Vocabulary:
 
     def rangeIncludes(self, rangeName):
         self.lastElementAdded.addRange(rangeName)
+        return self
+
+    def inverseOf(self, inversePropertyName):
+        self.lastElementAdded.setInverseOf(inversePropertyName)
         return self
 
     def comment(self, comment):
