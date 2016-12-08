@@ -29,7 +29,7 @@ def createPropertyPage(p, voc):
     if not p.isFromSchemaOrg:
         outputPage('property', p.name + '.html', element=p)
 
-def createClassHierarchyListItem(c, children, indentLevel = 0):
+def createClassHierarchyListItem(c, children):
     tags = []
 
     if c.name in children:
@@ -45,11 +45,11 @@ def createClassHierarchyListItem(c, children, indentLevel = 0):
     if c.name in children:
         subListItems = []
         for subClass in children[c.name]:
-            li = createClassHierarchyListItem(subClass, children, indentLevel)
+            li = createClassHierarchyListItem(subClass, children)
             subListItems.append(li)
-        tags.append(createTag('ul', [], '\n'.join(subListItems), indentLevel, True))
+        tags.append(createTag('ul', [], '\n'.join(subListItems), 0, True))
 
-    return createTag('li', [('id', c.name)], '\n'.join(tags), indentLevel, True)
+    return createTag('li', [('id', c.name)], '\n'.join(tags), 0, True)
 
 def createClassHierarchyPage(voc):
     roots = []
