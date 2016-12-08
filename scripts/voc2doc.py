@@ -19,7 +19,7 @@ def createClassPage(c, voc):
         return
 
     h = voc.getHierachicalInformation(c)
-    outputPage('class', 'test-' + c.name + '.html', **{
+    outputPage('class', c.name + '.html', **{
         'title': c.name,
         'element': c,
         'breadcrumbs': h['breadcrumbs'],
