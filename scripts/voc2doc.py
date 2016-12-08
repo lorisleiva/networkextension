@@ -18,7 +18,13 @@ def createClassPage(c, voc):
     if c.isFromSchemaOrg:
         return
 
-    outputPage('class', 'test-' + c.name + '.html', title=c.name, element=c)
+    h = voc.getHierachicalInformation(c)
+    outputPage('class', 'test-' + c.name + '.html', **{
+        'title': c.name,
+        'element': c,
+        'breadcrumbs': h['breadcrumbs'],
+        'inheritances': h['inheritances'],
+    })
 
 if __name__ == '__main__':
     voc = getVocabulary()

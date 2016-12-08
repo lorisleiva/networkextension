@@ -93,3 +93,28 @@ class Vocabulary:
     def comment(self, comment):
         self.lastElementAdded.comment = comment
         return self
+
+    def getHierachicalInformation(self, c):
+        breadcrumbs = []
+        inheritances = []
+
+        if not c.parents:
+            return {
+                'breadcrumbs' : [[c]],
+                'inheritances' : [c],
+            }
+
+        for parent in c.parents:
+            h = self.getHierachicalInformation(parent)
+            for breadcrumb in h['breadcrumbs']:
+                breadcrumb.append(c)
+                breadcrumbs.append(breadcrumb)
+            for inheritance in h['inheritances']:
+                if c not in inheritances:
+                    inheritances.append(inheritance)
+            inheritances.insert(0, c)
+
+        return {
+            'breadcrumbs' : breadcrumbs,
+            'inheritances' : inheritances,
+        }
