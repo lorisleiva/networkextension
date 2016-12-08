@@ -2,25 +2,23 @@ class SemanticElement:
     def __init__(self, name, comment = None):
         self.name = name
         self.comment = comment
+        self.isFromSchemaOrg = False
 
-    def setComment(self, comment):
-        self.comment = comment
-        return self
+    def getSchemaUrl(self):
+        return 'http://schema.org/' + self.name
 
-    def __repr__(self):
-        return self.name + "\n\t>> " + self.comment
+    def getUrl(self):
+        if self.isFromSchemaOrg:
+            return self.getSchemaUrl()
+        else:
+            return '/' + self.name + '.html'
 
 class Class(SemanticElement):
     def __init__(self, name, comment = None):
         super().__init__(name, comment);
         self.parents = []
-
-    def addParent(self, className):
-        self.parents.append(className)
-        return self
-
-    def __repr__(self):
-        return "Class " + super().__repr__() + "\n\t>> subClassOf: " + ', '.join(self.parents)
+        self.properties = []
+        self.rangeOf = []
         
 class Property(SemanticElement):
     def __init__(self, name, comment = None):
@@ -29,64 +27,69 @@ class Property(SemanticElement):
         self.ranges = []
         self.inverseOf = None
 
-    def addDomain(self, domainName):
-        self.domains.append(domainName)
-        return self
-
-    def addRange(self, rangeName):
-        self.ranges.append(rangeName)
-        return self
-
-    def setInverseOf(self, inverseOf):
-        self.inverseOf = inverseOf
-        return self
-
-    def __repr__(self):
-        return "Property " + super().__repr__() + "\n\t>> domains: " + ', '.join(self.domains) + "\n\t>> ranges: " + ', '.join(self.ranges)
-
 class Vocabulary:
     def __init__(self, baseUrl, classes = {}, properties = {}):
-        super(Vocabulary, self).__init__()
         self.baseUrl = baseUrl
         self.classes = classes
         self.properties = properties
         self.lastElementAdded = None
-        
+
+    def checkClassOrAddAsSchema(self, className):
+        if className not in self.classes:
+            newClass = Class(className)
+            newClass.isFromSchemaOrg = True
+            self.classes[className] = newClass
+
+    def checkPropertyOrAddAsSchema(self, propertyName):
+        if propertyName not in self.properties:
+            newProperty = Class(propertyName)
+            newProperty.isFromSchemaOrg = True
+            self.classes[propertyName] = newProperty
+
     def addClass(self, newClassName):
-        newClass = Class(newClassName)
-        self.classes[newClassName] = newClass
-        self.lastElementAdded = newClass
+        if newClassName in self.classes:
+            self.classes[newClassName].isFromSchemaOrg = False
+        else:
+            newClass = Class(newClassName)
+            self.classes[newClassName] = newClass
+            self.lastElementAdded = newClass
         return self
 
     def subClassOf(self, className):
-        self.lastElementAdded.addParent(className)
+        self.checkClassOrAddAsSchema(className)
+        parent = self.classes[className]
+        self.lastElementAdded.parents.append(parent)
         return self
         
     def addProperty(self, newPropertyName):
-        newProperty = Property(newPropertyName)
-        self.properties[newPropertyName] = newProperty
-        self.lastElementAdded = newProperty
+        if newPropertyName in self.properties:
+            self.properties[newPropertyName].isFromSchemaOrg = False
+        else:
+            newProperty = Property(newPropertyName)
+            self.properties[newPropertyName] = newProperty
+            self.lastElementAdded = newProperty
         return self
 
     def domainIncludes(self, domainName):
-        self.lastElementAdded.addDomain(domainName)
+        self.checkClassOrAddAsSchema(domainName)
+        domain = self.classes[domainName]
+        self.lastElementAdded.domains.append(domain)
+        domain.properties.append(self.lastElementAdded)
         return self
 
     def rangeIncludes(self, rangeName):
-        self.lastElementAdded.addRange(rangeName)
+        self.checkClassOrAddAsSchema(rangeName)
+        type = self.classes[rangeName]
+        self.lastElementAdded.ranges.append(type)
+        type.rangeOf.append(self.lastElementAdded)
         return self
 
     def inverseOf(self, inversePropertyName):
-        self.lastElementAdded.setInverseOf(inversePropertyName)
+        self.checkPropertyOrAddAsSchema(inversePropertyName)
+        inverseProperty = self.properties[inversePropertyName]
+        self.lastElementAdded.inverseOf = inverseProperty
         return self
 
     def comment(self, comment):
-        self.lastElementAdded.setComment(comment)
+        self.lastElementAdded.comment = comment
         return self
-
-    def __repr__(self):
-        s = "Vocabulary(" + self.baseUrl + ")\n\n"
-        s += '\n\n'.join([self.classes[k].__repr__() for k in self.classes])
-        s += '\n\n'
-        s += '\n\n'.join([self.properties[k].__repr__() for k in self.properties])
-        return s

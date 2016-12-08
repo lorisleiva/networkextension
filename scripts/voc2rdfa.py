@@ -62,7 +62,7 @@ def parseClass(c, voc, identLevel = 0):
     tags.append(createCommentTag(c.comment)) if c.comment else None
 
     for p in c.parents:
-        tags.append(createSubClassTag(p))
+        tags.append(createSubClassTag(p.name))
 
     return createResourceTag('Class', c.name, tags, identLevel)
 
@@ -73,10 +73,10 @@ def parseProperty(p, voc, identLevel = 0):
     tags.append(createCommentTag(p.comment)) if p.comment else None
 
     for d in p.domains:
-        tags.append(createDomainTag(d))
+        tags.append(createDomainTag(d.name))
 
     for r in p.ranges:
-        tags.append(createRangeTag(r))
+        tags.append(createRangeTag(r.name))
 
     tags.append(createInverseOfTag(p.inverseOf)) if p.inverseOf else None
     return createResourceTag('Property', p.name, tags, identLevel)
@@ -91,11 +91,15 @@ def parseVocabulary(voc, filename):
 
         out.write(createComment('Classes', 1) + '\n\n')
         for c in voc.classes:
-            out.write(parseClass(voc.classes[c], voc, 1) + '\n\n')
+            c = voc.classes[c]
+            if not c.isFromSchemaOrg:
+                out.write(parseClass(c, voc, 1) + '\n\n')
 
         out.write(createComment('Properties', 1) + '\n\n')
         for p in voc.properties:
-            out.write(parseProperty(voc.properties[p], voc, 1) + '\n\n')
+            p = voc.properties[p]
+            if not p.isFromSchemaOrg:
+                out.write(parseProperty(p, voc, 1) + '\n\n')
 
         out.write('<div>')
 
