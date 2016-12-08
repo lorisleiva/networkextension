@@ -11,7 +11,7 @@ class SemanticElement:
         if self.isFromSchemaOrg:
             return self.getSchemaUrl()
         else:
-            return '/' + self.name + '.html'
+            return '/' + self.name
 
 class Class(SemanticElement):
     def __init__(self, name, comment = None):
