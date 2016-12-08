@@ -1,4 +1,6 @@
 class SemanticElement:
+    baseUrl = ''
+
     def __init__(self, name, comment = None):
         self.name = name
         self.comment = comment
@@ -11,7 +13,7 @@ class SemanticElement:
         if self.isFromSchemaOrg:
             return self.getSchemaUrl()
         else:
-            return '/' + self.name
+            return SemanticElement.baseUrl + '/' + self.name
 
 class Class(SemanticElement):
     def __init__(self, name, comment = None):
@@ -29,6 +31,7 @@ class Property(SemanticElement):
 
 class Vocabulary:
     def __init__(self, baseUrl, classes = {}, properties = {}):
+        SemanticElement.baseUrl = baseUrl
         self.baseUrl = baseUrl
         self.classes = classes
         self.properties = properties

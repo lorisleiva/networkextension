@@ -121,9 +121,9 @@
         <h1>Network Extension</h1>
         <p>An external Schema.org extension that described components from Computer Networks inspired by Bro.</p>
         <p>
-          - <a href="/">See all classes</a>
+          - <a href="https://lorisleiva.github.io/networkextension/">See all classes</a>
           <br>
-          - <a href="/properties">See all properties</a>
+          - <a href="https://lorisleiva.github.io/networkextension/properties">See all properties</a>
         </p>
 
         <p class="view"><a href="https://github.com/lorisleiva/networkextension">View the Project on GitHub <small>lorisleiva/networkextension</small></a></p>
