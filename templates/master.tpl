@@ -21,6 +21,7 @@
         padding: 0 0 0 5px;
         margin: 0;
       }
+      #thing_tree a:link,
       #mainContent a:link
       {
         color: #660000;
@@ -29,12 +30,14 @@
         font-family: "Lucida Grande" , "Lucida Sans Unicode" , Verdana, Tahoma, Arial, sans-serif;
         line-height: 160%;
       }
+      #thing_tree a:visited,
       #mainContent a:visited
       {
         color: #990000;
         text-decoration: none;
         border-bottom: dotted 1px #990000;
       }
+      #thing_tree a:hover,
       #mainContent a:hover
       {
         border-bottom: none;
@@ -100,13 +103,28 @@
         padding: 0;
         border-collapse: collapse
       }
+      #thing_tree ul
+      {
+        border-left: 1px solid #ddd;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      #thing_tree ul.no-border
+      {
+        border: none;
+      }
     </style>
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <h1>{{ title or 'Network Extension' }}</h1>
+        <h1>Network Extension</h1>
         <p>An external Schema.org extension that described components from Computer Networks inspired by Bro.</p>
+        <p>
+          - <a href="/">See all classes</a>
+          <br>
+          - <a href="/properties">See all properties</a>
+        </p>
 
         <p class="view"><a href="https://github.com/lorisleiva/networkextension">View the Project on GitHub <small>lorisleiva/networkextension</small></a></p>
 
