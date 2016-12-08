@@ -2,7 +2,7 @@ from vocabulary import Vocabulary
 
 def getVocabulary():
 
-    voc = Vocabulary('http://example.org')
+    voc = Vocabulary('https://lorisleiva.github.io/networkextension')
 
     # Classes
 
