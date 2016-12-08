@@ -136,30 +136,58 @@
       </header>
       <section class='schema'>
 
-<h1>This is the index</h1>
+<div 
+    id="mainContent" 
+    vocab="http://schema.org/" 
+    typeof="rdfs:Property" 
+    resource="http://schema.org/ipv4"
+>
 
-<div id="thing_tree">
-    <h3>netcomp extension without core vocabulary</h3>
-    <ul class="no-border">
-	<li id="Thing">
-		<a href="http://schema.org/Thing" class="tbranch">Thing</a>
-		<ul>
-			<li id="NetworkComponent">
-				<a href="/NetworkComponent" class="tbranch">NetworkComponent</a>
-				<ul>
-					<li id="EndPointComponent">
-						<a href="/EndPointComponent" class="tbranch">EndPointComponent</a>
-						<ul>
-							<li id="IpAddress">
-								<a href="/IpAddress" class="tleaf">IpAddress</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-		</ul>
-	</li>
-</ul>
+    <h1 property="rdfs:label" class="page-title">ipv4</h1>
+
+    <h4>
+        <span class='breadcrumbs'>
+            <a href="http://schema.org/Thing">Thing</a>
+            &nbsp;&gt;&nbsp;
+            <a href="http://meta.schema.org/Property">Property</a>
+            &nbsp;&gt;&nbsp;
+            <a href="/ipv4">ipv4</a>
+        </span>
+    </h4>
+
+    <div property="rdfs:comment">The IPV4 address of the host</div>
+
+    <table class="definition-table">
+        <thead>
+            <tr><th>Values expected to be one of these types</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                        <link property="rangeIncludes" href="http://schema.org/Text">
+                        <a href="http://schema.org/Text" title="The 'ipv4' property has values that include instances of the 'Text' type.">
+                            Text
+                        </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="definition-table">
+        <thead>
+            <tr><th>Used on these types</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                        <link property="domainIncludes" href="http://schema.org/IpAddress">
+                        <a href="/IpAddress" title="The 'ipv4' property is used on the 'IpAddress' type.">
+                            IpAddress
+                        </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>      </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/lorisleiva">lorisleiva</a></p>

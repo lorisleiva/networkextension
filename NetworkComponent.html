@@ -136,30 +136,39 @@
       </header>
       <section class='schema'>
 
-<h1>This is the index</h1>
+<div 
+    id="mainContent" 
+    vocab="http://schema.org/" 
+    typeof="rdfs:Class" 
+    resource="http://schema.org/NetworkComponent"
+>
 
-<div id="thing_tree">
-    <h3>netcomp extension without core vocabulary</h3>
-    <ul class="no-border">
-	<li id="Thing">
-		<a href="http://schema.org/Thing" class="tbranch">Thing</a>
-		<ul>
-			<li id="NetworkComponent">
-				<a href="/NetworkComponent" class="tbranch">NetworkComponent</a>
-				<ul>
-					<li id="EndPointComponent">
-						<a href="/EndPointComponent" class="tbranch">EndPointComponent</a>
-						<ul>
-							<li id="IpAddress">
-								<a href="/IpAddress" class="tleaf">IpAddress</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-		</ul>
-	</li>
-</ul>
+    <h1 property="rdfs:label" class="page-title">NetworkComponent</h1>
+        <link  property="rdfs:subClassOf" href="http://schema.org/Thing" />
+
+    <h4>
+        <span class='breadcrumbs'>
+            <a href="http://schema.org/Thing">Thing</a>
+                &nbsp;&gt;&nbsp;
+            <a href="/NetworkComponent">NetworkComponent</a>
+        </span>
+    </h4>
+
+    <div property="rdfs:comment">A network component is any type of class that falls under the netcomp extension.</div>
+
+    <table class="definition-table">
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Expected Type</th>
+                <th>Description</th>               
+            </tr>
+        </thead>
+
+        <tbody class="supertype">
+        </tbody>
+    </table>
+
 </div>      </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/lorisleiva">lorisleiva</a></p>

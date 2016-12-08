@@ -136,30 +136,81 @@
       </header>
       <section class='schema'>
 
-<h1>This is the index</h1>
+<div 
+    id="mainContent" 
+    vocab="http://schema.org/" 
+    typeof="rdfs:Class" 
+    resource="http://schema.org/IpAddress"
+>
 
-<div id="thing_tree">
-    <h3>netcomp extension without core vocabulary</h3>
-    <ul class="no-border">
-	<li id="Thing">
-		<a href="http://schema.org/Thing" class="tbranch">Thing</a>
-		<ul>
-			<li id="NetworkComponent">
-				<a href="/NetworkComponent" class="tbranch">NetworkComponent</a>
-				<ul>
-					<li id="EndPointComponent">
-						<a href="/EndPointComponent" class="tbranch">EndPointComponent</a>
-						<ul>
-							<li id="IpAddress">
-								<a href="/IpAddress" class="tleaf">IpAddress</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-		</ul>
-	</li>
-</ul>
+    <h1 property="rdfs:label" class="page-title">IpAddress</h1>
+        <link  property="rdfs:subClassOf" href="http://schema.org/EndPointComponent" />
+
+    <h4>
+        <span class='breadcrumbs'>
+            <a href="http://schema.org/Thing">Thing</a>
+                &nbsp;&gt;&nbsp;
+            <a href="/NetworkComponent">NetworkComponent</a>
+                &nbsp;&gt;&nbsp;
+            <a href="/EndPointComponent">EndPointComponent</a>
+                &nbsp;&gt;&nbsp;
+            <a href="/IpAddress">IpAddress</a>
+        </span>
+    </h4>
+
+    <div property="rdfs:comment">Represent an host with an IP Address</div>
+
+    <table class="definition-table">
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Expected Type</th>
+                <th>Description</th>               
+            </tr>
+        </thead>
+
+        <tbody class="supertype">
+            <tr class="supertype">
+                <th class="supertype-name" colspan="3">
+                    Properties from <a href="/IpAddress">IpAddress</a>
+                </th>
+            </tr>
+
+                <tr typeof="rdfs:Property" resource="http://schema.org/ipv4">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="/ipv4">ipv4</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/IpAddress">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The IPV4 address of the host
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/ipv6">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="/ipv6">ipv6</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/IpAddress">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The IPV6 address of the host
+                    </td>
+                </tr>   
+        </tbody>
+    </table>
+
 </div>      </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/lorisleiva">lorisleiva</a></p>
