@@ -5,12 +5,13 @@ class SemanticElement:
         self.name = name
         self.comment = comment
         self.isFromSchemaOrg = False
+        self.extendsSchemaOrg = False
 
     def getSchemaUrl(self):
         return 'http://schema.org/' + self.name
 
     def getUrl(self):
-        if self.isFromSchemaOrg:
+        if self.isFromSchemaOrg and not self.extendsSchemaOrg:
             return self.getSchemaUrl()
         else:
             return SemanticElement.baseUrl + '/' + self.name
@@ -58,6 +59,14 @@ class Vocabulary:
             self.lastElementAdded = newClass
         return self
 
+    def addSchemaClass(self, newClassName, extends = False):
+        newClass = Class(newClassName)
+        newClass.isFromSchemaOrg = True
+        newClass.extendsSchemaOrg = extends
+        self.classes[newClassName] = newClass
+        self.lastElementAdded = newClass
+        return self
+
     def subClassOf(self, className):
         self.checkClassOrAddAsSchema(className)
         parent = self.classes[className]
@@ -71,6 +80,14 @@ class Vocabulary:
             newProperty = Property(newPropertyName)
             self.properties[newPropertyName] = newProperty
             self.lastElementAdded = newProperty
+        return self
+
+    def addSchemaProperty(self, newPropertyName, extends = False):
+        newProperty = Property(newPropertyName)
+        newProperty.isFromSchemaOrg = True
+        newProperty.extendsSchemaOrg = extends
+        self.properties[newPropertyName] = newProperty
+        self.lastElementAdded = newProperty
         return self
 
     def domainIncludes(self, domainName):

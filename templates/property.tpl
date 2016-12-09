@@ -19,8 +19,25 @@
         </span>
     </h4>
 
-    <div property="rdfs:comment">{{ element.comment }}</div>
+    <div property="rdfs:comment">{{! element.comment }}</div>
 
+    % if element.extendsSchemaOrg:
+        <br>
+        <p>
+            <em>
+                This property has been extended from 
+                <a href="{{ element.getSchemaUrl() }}">Schema.org</a>
+            </em>
+        </p>
+    % end
+
+    % if element.inverseOf:
+        <br>
+        Inverse property: 
+        <a href="{{ element.inverseOf.getUrl() }}">
+            {{ element.inverseOf.name }}
+        </a>
+    % end
     <table class="definition-table">
         <thead>
             <tr><th>Values expected to be one of these types</th></tr>

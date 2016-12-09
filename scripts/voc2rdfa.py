@@ -19,11 +19,11 @@ def createCommentTag(comment):
         ('property', 'rdfs:comment')
     ], comment)
 
-def createSubClassTag(name):
+def createSubClassTag(parent):
     link = createTag('a', [
         ('property', 'rdfs:subClassOf'),
-        ('href', 'http://schema.org/' + name)
-    ], name)
+        ('href', parent.getSchemaUrl())
+    ], parent.name)
 
     return createTag('span', [], 'Subclass of: ' + link)
 
@@ -49,10 +49,10 @@ def createInverseOfTag(name):
         ('href', 'http://schema.org/' + name)
     ])
 
-def createResourceTag(type, name, tags, identLevel = 0):
+def createResourceTag(type, url, tags, identLevel = 0):
     return createTag('div', [
         ('typeof', 'rdfs:' + type),
-        ('resource', 'http://schema.org/' + name)
+        ('resource', url)
     ], '\n'.join(tags), identLevel)
 
 def parseClass(c, voc, identLevel = 0):
@@ -62,9 +62,9 @@ def parseClass(c, voc, identLevel = 0):
     tags.append(createCommentTag(c.comment)) if c.comment else None
 
     for p in c.parents:
-        tags.append(createSubClassTag(p.name))
+        tags.append(createSubClassTag(p))
 
-    return createResourceTag('Class', c.name, tags, identLevel)
+    return createResourceTag('Class', c.getSchemaUrl(), tags, identLevel)
 
 def parseProperty(p, voc, identLevel = 0):
     tags = []
@@ -79,7 +79,7 @@ def parseProperty(p, voc, identLevel = 0):
         tags.append(createRangeTag(r.name))
 
     tags.append(createInverseOfTag(p.inverseOf)) if p.inverseOf else None
-    return createResourceTag('Property', p.name, tags, identLevel)
+    return createResourceTag('Property', p.getSchemaUrl(), tags, identLevel)
 
 def parseVocabulary(voc, filename):
     with open(filename, 'w') as out:
@@ -92,13 +92,13 @@ def parseVocabulary(voc, filename):
         out.write(createComment('Classes', 1) + '\n\n')
         for c in voc.classes:
             c = voc.classes[c]
-            if not c.isFromSchemaOrg:
+            if not c.isFromSchemaOrg or c.extendsSchemaOrg:
                 out.write(parseClass(c, voc, 1) + '\n\n')
 
         out.write(createComment('Properties', 1) + '\n\n')
         for p in voc.properties:
             p = voc.properties[p]
-            if not p.isFromSchemaOrg:
+            if not p.isFromSchemaOrg or p.extendsSchemaOrg:
                 out.write(parseProperty(p, voc, 1) + '\n\n')
 
         out.write('<div>')

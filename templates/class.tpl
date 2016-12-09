@@ -25,7 +25,17 @@
     % end
     </h4>
 
-    <div property="rdfs:comment">{{ element.comment }}</div>
+    <div property="rdfs:comment">{{! element.comment }}</div>
+
+    % if element.extendsSchemaOrg:
+        <br>
+        <p>
+            <em>
+                This class has been extended from 
+                <a href="{{ element.getSchemaUrl() }}">Schema.org</a>
+            </em>
+        </p>
+    % end
 
     <table class="definition-table">
         <thead>
@@ -68,7 +78,14 @@
                     % end
                     </td>
                     <td class="prop-desc" property="rdfs:comment">
-                        {{ property.comment }}
+                        {{! property.comment }}
+                        % if property.inverseOf:
+                            <br>
+                            Inverse property: 
+                            <a href="{{ property.inverseOf.getUrl() }}">
+                                {{ property.inverseOf.name }}
+                            </a>
+                        % end
                     </td>
                 </tr>   
             % end
@@ -110,7 +127,14 @@
                     % end
                     </td>
                     <td class="prop-desc" property="rdfs:comment">
-                        {{ property.comment }}
+                        {{! property.comment }}
+                        % if property.inverseOf:
+                            <br>
+                            Inverse property: 
+                            <a href="{{ property.inverseOf.getUrl() }}">
+                                {{ property.inverseOf.name }}
+                            </a>
+                        % end
                     </td>
                 </tr>   
             % end

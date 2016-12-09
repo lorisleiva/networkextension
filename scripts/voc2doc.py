@@ -15,7 +15,7 @@ def outputPage(tpl, filename, **kwargs):
         out.write(page)
 
 def createClassPage(c, voc):
-    if c.isFromSchemaOrg:
+    if c.isFromSchemaOrg and not c.extendsSchemaOrg:
         return
 
     h = voc.getHierachicalInformation(c)
@@ -26,7 +26,7 @@ def createClassPage(c, voc):
     })
 
 def createPropertyPage(p, voc):
-    if not p.isFromSchemaOrg:
+    if not p.isFromSchemaOrg or p.extendsSchemaOrg:
         outputPage('property', p.name + '.html', element=p)
 
 def createClassHierarchyListItem(c, children):
