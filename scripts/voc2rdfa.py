@@ -43,10 +43,10 @@ def createRangeTag(name):
 
     return createTag('span', [], 'Range: ' + link)
 
-def createInverseOfTag(name):
+def createInverseOfTag(inverseOf):
     return createTag('link', [
         ('property', 'http://schema.org/inverseOf'),
-        ('href', 'http://schema.org/' + name)
+        ('href', 'http://schema.org/' + inverseOf.name)
     ])
 
 def createResourceTag(type, url, tags, identLevel = 0):

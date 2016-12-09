@@ -8,43 +8,647 @@
 
 	<!-- Classes -->
 
-	<div typeof="rdfs:Class" resource="http://schema.org/IpAddress">
-		<link property="http://schema.org/isPartOf" href="http://example.org" />
-		<span class="h" property="rdfs:label">IpAddress</span>
-		<span property="rdfs:comment">Represent an host with an IP Address</span>
-		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/EndPointComponent">EndPointComponent</a></span>
+	<div typeof="rdfs:Class" resource="http://schema.org/Certificate">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">Certificate</span>
+		<span property="rdfs:comment">An exchange of certificates.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/NetworkInteraction">NetworkInteraction</a></span>
+	</div>
+
+	<div typeof="rdfs:Class" resource="http://schema.org/Statistic">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">Statistic</span>
+		<span property="rdfs:comment">A statistic about the network.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/NetworkNotification">NetworkNotification</a></span>
 	</div>
 
 	<div typeof="rdfs:Class" resource="http://schema.org/EndPointComponent">
-		<link property="http://schema.org/isPartOf" href="http://example.org" />
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
 		<span class="h" property="rdfs:label">EndPointComponent</span>
-		<span property="rdfs:comment">This class represents any type of end-points present in a computer network. E.g.: an IP address, a device or a file.</span>
+		<span property="rdfs:comment">Represents any type of end-points present in a computer network. E.g.: an IP address, a device or a file.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/NetworkComponent">NetworkComponent</a></span>
+	</div>
+
+	<div typeof="rdfs:Class" resource="http://schema.org/DNP3">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">DNP3</span>
+		<span property="rdfs:comment">A DNP3 connection.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Service">Service</a></span>
+	</div>
+
+	<div typeof="rdfs:Class" resource="http://schema.org/SSH">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">SSH</span>
+		<span property="rdfs:comment">A SSH connection.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Service">Service</a></span>
+	</div>
+
+	<div typeof="rdfs:Class" resource="http://schema.org/HTTP">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">HTTP</span>
+		<span property="rdfs:comment">A HTTP connection.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Service">Service</a></span>
+	</div>
+
+	<div typeof="rdfs:Class" resource="http://schema.org/Connection">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">Connection</span>
+		<span property="rdfs:comment">An exchange of packages between two hosts.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/NetworkInteraction">NetworkInteraction</a></span>
+	</div>
+
+	<div typeof="rdfs:Class" resource="http://schema.org/DNS">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">DNS</span>
+		<span property="rdfs:comment">A DNS connection.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Service">Service</a></span>
+	</div>
+
+	<div typeof="rdfs:Class" resource="http://schema.org/Device">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">Device</span>
+		<span property="rdfs:comment">A device with a Mac Address.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/EndPointComponent">EndPointComponent</a></span>
+	</div>
+
+	<div typeof="rdfs:Class" resource="http://schema.org/Signature">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">Signature</span>
+		<span property="rdfs:comment">A signature that has been detected by an IDS.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/NetworkNotification">NetworkNotification</a></span>
+	</div>
+
+	<div typeof="rdfs:Class" resource="http://schema.org/NetworkInteraction">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">NetworkInteraction</span>
+		<span property="rdfs:comment">Represents any type of interaction between various end-point components. E.g.: a Connection using HTTP.</span>
 		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/NetworkComponent">NetworkComponent</a></span>
 	</div>
 
 	<div typeof="rdfs:Class" resource="http://schema.org/NetworkComponent">
-		<link property="http://schema.org/isPartOf" href="http://example.org" />
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
 		<span class="h" property="rdfs:label">NetworkComponent</span>
-		<span property="rdfs:comment">A network component is any type of class that falls under the netcomp extension.</span>
+		<span property="rdfs:comment">Any type of class that falls under the netcomp extension.</span>
 		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Thing">Thing</a></span>
+	</div>
+
+	<div typeof="rdfs:Class" resource="http://schema.org/Alert">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">Alert</span>
+		<span property="rdfs:comment">An alert about the network's status.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/NetworkNotification">NetworkNotification</a></span>
+	</div>
+
+	<div typeof="rdfs:Class" resource="http://schema.org/SSL">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">SSL</span>
+		<span property="rdfs:comment">A SSL connection.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Service">Service</a></span>
+	</div>
+
+	<div typeof="rdfs:Class" resource="http://schema.org/SMTP">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">SMTP</span>
+		<span property="rdfs:comment">A SMTP connection.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Service">Service</a></span>
+	</div>
+
+	<div typeof="rdfs:Class" resource="http://schema.org/DHCP">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">DHCP</span>
+		<span property="rdfs:comment">A DHCP connection.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Service">Service</a></span>
+	</div>
+
+	<div typeof="rdfs:Class" resource="http://schema.org/NetworkNotification">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">NetworkNotification</span>
+		<span property="rdfs:comment">Represents any system that notifies about the network's status.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/NetworkComponent">NetworkComponent</a></span>
+	</div>
+
+	<div typeof="rdfs:Class" resource="http://schema.org/Service">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">Service</span>
+		<span property="rdfs:comment">A generic representation of a type of service used between two hosts.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/NetworkInteraction">NetworkInteraction</a></span>
+	</div>
+
+	<div typeof="rdfs:Class" resource="http://schema.org/Software">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">Software</span>
+		<span property="rdfs:comment">A software that is being or has been used by an host.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/EndPointComponent">EndPointComponent</a></span>
+	</div>
+
+	<div typeof="rdfs:Class" resource="http://schema.org/File">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">File</span>
+		<span property="rdfs:comment">A unique file that gets transfered over the network.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/EndPointComponent">EndPointComponent</a></span>
+	</div>
+
+	<div typeof="rdfs:Class" resource="http://schema.org/FTP">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">FTP</span>
+		<span property="rdfs:comment">A FTP connection.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Service">Service</a></span>
+	</div>
+
+	<div typeof="rdfs:Class" resource="http://schema.org/IpAddress">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">IpAddress</span>
+		<span property="rdfs:comment">An host with an IP Address.</span>
+		<span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/EndPointComponent">EndPointComponent</a></span>
 	</div>
 
 	<!-- Properties -->
 
+	<div typeof="rdfs:Property" resource="http://schema.org/respondingPort">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">respondingPort</span>
+		<span property="rdfs:comment">The responding endpoint's port.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Connection">Connection</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Number">Number</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/bytes">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">bytes</span>
+		<span property="rdfs:comment">Total number of bytes that the item is supposed to comprised.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/File">File</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Number">Number</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/respondingIp">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">respondingIp</span>
+		<span property="rdfs:comment">The responding ip address.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Connection">Connection</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/IpAddress">IpAddress</a></span>
+		<link property="http://schema.org/inverseOf" href="http://schema.org/connectionAssociated" />
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/version">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">version</span>
+		<span property="rdfs:comment">The version of the item.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Software">Software</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SSL">SSL</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Number">Number</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/serialNumber">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">serialNumber</span>
+		<span property="rdfs:comment">The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for the serial number of the product included in the offer.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Certificate">Certificate</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Demand">Demand</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/IndividualProduct">IndividualProduct</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Offer">Offer</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/md5Digest">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">md5Digest</span>
+		<span property="rdfs:comment">An MD5 digest of the item's content.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/File">File</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SSL">SSL</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/mimeType">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">mimeType</span>
+		<span property="rdfs:comment">The mime type of the file.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/File">File</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/macAddress">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">macAddress</span>
+		<span property="rdfs:comment">The mac address of a device, E.g. detected after a DHCP connection.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Device">Device</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/DHCP">DHCP</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/serviceRunning">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">serviceRunning</span>
+		<span property="rdfs:comment">One or several services running on this host.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/IpAddress">IpAddress</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Service">Service</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/parentFile">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">parentFile</span>
+		<span property="rdfs:comment">Container file from which this one was extracted as part of the file analysis.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/File">File</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/File">File</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/sha256Digest">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">sha256Digest</span>
+		<span property="rdfs:comment">An SHA256 digest of the item's content.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/File">File</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/originatingBytes">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">originatingBytes</span>
+		<span property="rdfs:comment">The number of payload bytes the originator sent.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Connection">Connection</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Number">Number</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/certificateSubject">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">certificateSubject</span>
+		<span property="rdfs:comment">The certificate's subject.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Certificate">Certificate</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/addressCountry">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">addressCountry</span>
+		<span property="rdfs:comment">The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/IpAddress">IpAddress</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/GeoCoordinates">GeoCoordinates</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/GeoShape">GeoShape</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/PostalAddress">PostalAddress</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Country">Country</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/source">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">source</span>
+		<span property="rdfs:comment">An identification of the source of the item. E.g. A network protocol over which a file was transfered.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/File">File</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/transactionDepth">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">transactionDepth</span>
+		<span property="rdfs:comment">Represent the depth of an item in a network transaction. E.g: <ul><li>For a SMTP connection: it counts the depth of the message transaction in a single connection where multiple messages were transfered.</li><li>For a HTTP connection: it represents the pipelined depth into the connection of this request/response transaction.</li><li>For a File: it depends on its source.</li></ul></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SMTP">SMTP</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/HTTP">HTTP</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/File">File</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Number">Number</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/timedOut">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">timedOut</span>
+		<span property="rdfs:comment">Whether the file analysis timed out at least once for the file.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/File">File</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Boolean">Boolean</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/isLocal">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">isLocal</span>
+		<span property="rdfs:comment">Determines whether the end-point component is inside the local network.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/EndPointComponent">EndPointComponent</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Boolean">Boolean</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/detectedAt">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">detectedAt</span>
+		<span property="rdfs:comment">The date and time at which the end-point component was detected.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/EndPointComponent">EndPointComponent</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/DateTime">DateTime</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/isWeird">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">isWeird</span>
+		<span property="rdfs:comment">Indicate if the connection has been indified as a weird in Bro.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Connection">Connection</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Boolean">Boolean</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/startedAt">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">startedAt</span>
+		<span property="rdfs:comment">The date and time at which the interaction started.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/NetworkInteraction">NetworkInteraction</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/DateTime">DateTime</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/bytesMissed">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">bytesMissed</span>
+		<span property="rdfs:comment">Number of bytes that were completely missed during the process of analysis. E.g. due to dropped packets.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/File">File</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Number">Number</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/history">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">history</span>
+		<span property="rdfs:comment">Records the status history of the connection.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Connection">Connection</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/status">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">status</span>
+		<span property="rdfs:comment">The status of an item.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Connection">Connection</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SSH">SSH</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/issuerSubject">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">issuerSubject</span>
+		<span property="rdfs:comment">The certificate's issuer subject.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Certificate">Certificate</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/dhcpHostname">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">dhcpHostname</span>
+		<span property="rdfs:comment">The value of the DHCP hostname option.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Device">Device</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/serviceAssociated">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">serviceAssociated</span>
+		<span property="rdfs:comment">An identification of the application protocol being sent over the connection.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Connection">Connection</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Service">Service</a></span>
+		<link property="http://schema.org/inverseOf" href="http://schema.org/connectionAssociated" />
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/uid">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">uid</span>
+		<span property="rdfs:comment">A unique identifier that can be used for each network component. Uids can be usefully when linked to another network management sytem like <a href="http://bro.org">Bro</a>.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/NetworkComponent">NetworkComponent</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/analysisDuration">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">analysisDuration</span>
+		<span property="rdfs:comment">The duration the file was analyzed for.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/File">File</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Time">Time</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/filename">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">filename</span>
+		<span property="rdfs:comment">The name of the file.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/File">File</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/sendByOriginator">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">sendByOriginator</span>
+		<span property="rdfs:comment">Indicates if the file is being sent by the originator of the connection.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/File">File</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Boolean">Boolean</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/originatingPackets">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">originatingPackets</span>
+		<span property="rdfs:comment">The number of packets the originator sent.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Connection">Connection</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Number">Number</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/weirdHasAlert">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">weirdHasAlert</span>
+		<span property="rdfs:comment">Whether the weird (from Bro) has raised an alert.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Connection">Connection</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Boolean">Boolean</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/filenameExtracted">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">filenameExtracted</span>
+		<span property="rdfs:comment">The local filename of extracted file.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/File">File</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/transmitter">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">transmitter</span>
+		<span property="rdfs:comment">The host or hosts that the data sourced from.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/File">File</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/IpAddress">IpAddress</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/analyzer">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">analyzer</span>
+		<span property="rdfs:comment">One or several analysis types done during file analysis.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/File">File</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/respondingBytes">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">respondingBytes</span>
+		<span property="rdfs:comment">The number of payload bytes the responder sent.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Connection">Connection</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Number">Number</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/respondingPackets">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">respondingPackets</span>
+		<span property="rdfs:comment">The number of packets the responder sent.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Connection">Connection</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Number">Number</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/bytesOverflown">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">bytesOverflown</span>
+		<span property="rdfs:comment">Number of 'not all-in-sequence' bytes that were delivered to analyzers due to reassembly buffer overflow.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/File">File</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Number">Number</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/certificateOffered">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">certificateOffered</span>
+		<span property="rdfs:comment">The certificates offered by this ip address.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/IpAddress">IpAddress</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Certificate">Certificate</a></span>
+		<link property="http://schema.org/inverseOf" href="http://schema.org/host" />
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/connectionAssociated">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">connectionAssociated</span>
+		<span property="rdfs:comment">One or several connections associated with a particular end-point component, service or alert.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/EndPointComponent">EndPointComponent</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Service">Service</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Alert">Alert</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Connection">Connection</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/weirdName">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">weirdName</span>
+		<span property="rdfs:comment">The name of the weird (from Bro).</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Connection">Connection</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/tunnelParents">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">tunnelParents</span>
+		<span property="rdfs:comment">Indicate the encapsulating parent connections used over the lifetime of this inner connection if any.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Connection">Connection</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Connection">Connection</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/transportProtocol">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">transportProtocol</span>
+		<span property="rdfs:comment">The transport layer protocol of the connection.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Connection">Connection</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
 	<div typeof="rdfs:Property" resource="http://schema.org/ipv6">
-		<link property="http://schema.org/isPartOf" href="http://example.org" />
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
 		<span class="h" property="rdfs:label">ipv6</span>
-		<span property="rdfs:comment">The IPV6 address of the host</span>
+		<span property="rdfs:comment">The IPV6 address of the host.</span>
 		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/IpAddress">IpAddress</a></span>
 		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
 	</div>
 
+	<div typeof="rdfs:Property" resource="http://schema.org/sha1Digest">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">sha1Digest</span>
+		<span property="rdfs:comment">An SHA1 digest of the item's content.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/File">File</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/duration">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">duration</span>
+		<span property="rdfs:comment">The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Connection">Connection</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Event">Event</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/MediaObject">MediaObject</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Movie">Movie</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/MusicRecording">MusicRecording</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/MusicRelease">MusicRelease</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Duration">Duration</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Time">Time</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/weirdInformation">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">weirdInformation</span>
+		<span property="rdfs:comment">More information on the weird (from Bro).</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Connection">Connection</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/bytesSeen">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">bytesSeen</span>
+		<span property="rdfs:comment">Number of bytes provided to the analysis engine for the item.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/File">File</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Number">Number</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/originatingPort">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">originatingPort</span>
+		<span property="rdfs:comment">The originating endpoint's port.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Connection">Connection</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Number">Number</a></span>
+	</div>
+
 	<div typeof="rdfs:Property" resource="http://schema.org/ipv4">
-		<link property="http://schema.org/isPartOf" href="http://example.org" />
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
 		<span class="h" property="rdfs:label">ipv4</span>
-		<span property="rdfs:comment">The IPV4 address of the host</span>
+		<span property="rdfs:comment">The IPV4 address of the host.</span>
 		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/IpAddress">IpAddress</a></span>
 		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/host">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">host</span>
+		<span property="rdfs:comment">An IP address associated with that item. E.g.: <ul><li>For a software: it is the host that is running it.</li><li>For a certificate: it is the host that offered the certificate.</li></ul></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Software">Software</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Certificate">Certificate</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/IpAddress">IpAddress</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/receiver">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">receiver</span>
+		<span property="rdfs:comment">The host or hosts that the data traveled to.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/File">File</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/IpAddress">IpAddress</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/hostPort">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">hostPort</span>
+		<span property="rdfs:comment">The port that the host is using.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Software">Software</a></span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Certificate">Certificate</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Number">Number</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/originatingIp">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">originatingIp</span>
+		<span property="rdfs:comment">The originating ip address.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Connection">Connection</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/IpAddress">IpAddress</a></span>
+		<link property="http://schema.org/inverseOf" href="http://schema.org/connectionAssociated" />
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/softwareType">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">softwareType</span>
+		<span property="rdfs:comment">The type of the software. E.g. HTTP::SERVER.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Software">Software</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+	</div>
+
+	<div typeof="rdfs:Property" resource="http://schema.org/softwareAssociated">
+		<link property="http://schema.org/isPartOf" href="https://lorisleiva.github.io/networkextension" />
+		<span class="h" property="rdfs:label">softwareAssociated</span>
+		<span property="rdfs:comment">One or several software associated to this host.</span>
+		<span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/IpAddress">IpAddress</a></span>
+		<span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Software">Software</a></span>
+		<link property="http://schema.org/inverseOf" href="http://schema.org/host" />
 	</div>
 
 <div>
