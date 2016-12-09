@@ -44,7 +44,7 @@ def createClassHierarchyListItem(c, children):
 
     if c.name in children:
         subListItems = []
-        for subClass in children[c.name]:
+        for subClass in sorted(children[c.name], key=lambda x: x.name):
             li = createClassHierarchyListItem(subClass, children)
             subListItems.append(li)
         tags.append(createTag('ul', [], '\n'.join(subListItems), 0, True))
@@ -67,7 +67,7 @@ def createClassHierarchyPage(voc):
             children[parent.name].append(c)
 
     rootListItem = []
-    for root in roots:
+    for root in sorted(roots, key=lambda x: x.name):
         rootListItem.append(createClassHierarchyListItem(root, children))
     hierarchyHtml = createTag('ul', [('class', 'no-border')], '\n'.join(rootListItem), 0, True)
 
