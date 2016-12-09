@@ -37,55 +37,40 @@
 <div 
     id="mainContent" 
     vocab="http://schema.org/" 
-    typeof="rdfs:Property" 
-    resource="http://schema.org/ipv4"
+    typeof="rdfs:Class" 
+    resource="http://schema.org/File"
 >
 
-    <h1 property="rdfs:label" class="page-title">ipv4</h1>
+    <h1 property="rdfs:label" class="page-title">File</h1>
+        <link  property="rdfs:subClassOf" href="http://schema.org/EndPointComponent" />
 
     <h4>
         <span class='breadcrumbs'>
             <a href="http://schema.org/Thing">Thing</a>
-            &nbsp;&gt;&nbsp;
-            <a href="http://meta.schema.org/Property">Property</a>
-            &nbsp;&gt;&nbsp;
-            <a href="https://lorisleiva.github.io/networkextension/ipv4">ipv4</a>
+                &nbsp;&gt;&nbsp;
+            <a href="https://lorisleiva.github.io/networkextension/NetworkComponent">NetworkComponent</a>
+                &nbsp;&gt;&nbsp;
+            <a href="https://lorisleiva.github.io/networkextension/EndPointComponent">EndPointComponent</a>
+                &nbsp;&gt;&nbsp;
+            <a href="https://lorisleiva.github.io/networkextension/File">File</a>
         </span>
     </h4>
 
-    <div property="rdfs:comment">The IPV4 address of the host.</div>
+    <div property="rdfs:comment">A unique file that gets transfered over the network.</div>
 
     <table class="definition-table">
         <thead>
-            <tr><th>Values expected to be one of these types</th></tr>
-        </thead>
-        <tbody>
             <tr>
-                <td>
-                        <link property="rangeIncludes" href="http://schema.org/Text">
-                        <a href="http://schema.org/Text" title="The 'ipv4' property has values that include instances of the 'Text' type.">
-                            Text
-                        </a>
-                </td>
+                <th>Property</th>
+                <th>Expected Type</th>
+                <th>Description</th>               
             </tr>
+        </thead>
+
+        <tbody class="supertype">
         </tbody>
     </table>
 
-    <table class="definition-table">
-        <thead>
-            <tr><th>Used on these types</th></tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                        <link property="domainIncludes" href="http://schema.org/IpAddress">
-                        <a href="https://lorisleiva.github.io/networkextension/IpAddress" title="The 'ipv4' property is used on the 'IpAddress' type.">
-                            IpAddress
-                        </a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
 </div>      </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/lorisleiva">lorisleiva</a></p>
