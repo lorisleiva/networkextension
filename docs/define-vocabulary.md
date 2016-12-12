@@ -28,7 +28,7 @@ You will notice two things:
 1. The vocabulary keeps track of the last element added (class or property) so that when you do `voc.comment(...)`, it knows for which element to add the comment.
 2. When mentionning an element that have not yet being defined (E.g. `Thing` or `Boolean` in our example), the vocabulary will assume that it is from the core vocabulary of Schema.org. If you define it later, the vocabulary will understand that it belongs to your extension and update the element.
 
-Finally, use this vocabulary to generate the [documention](/TODO) and the [RDFA file](/TODO).
+Finally, use this vocabulary to generate the [documention](/docs/generate-doc) and the [RDFA file](/docs/generate-rdfa).
 
 ## Methods available
 
