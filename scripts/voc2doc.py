@@ -71,7 +71,12 @@ def createClassHierarchyPage(voc):
         rootListItem.append(createClassHierarchyListItem(root, children))
     hierarchyHtml = createTag('ul', [('class', 'no-border')], '\n'.join(rootListItem), 0, True)
 
-    outputPage('index', 'index.html', hierarchyHtml=hierarchyHtml)
+    outputPage('index', 'index.html', **{
+        'hierarchyHtml': hierarchyHtml,
+        'nbrClasses': sum(not voc.classes[c].isFromSchemaOrg for c in voc.classes),
+        'nbrProperties': sum(not voc.properties[p].isFromSchemaOrg for p in voc.properties),
+        'nbrPropertiesExtended': sum(voc.properties[p].isFromSchemaOrg and voc.properties[p].extendsSchemaOrg for p in voc.properties)
+    })
 
 def createAllPropertiesPage(voc):
     orderedProperties = sorted(list(voc.properties.values()), key=lambda p: p.name)

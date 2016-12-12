@@ -16,8 +16,8 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Network Extension</h1>
-        <p>An external Schema.org extension that described components from Computer Networks inspired by Bro.</p>
+        <h1>NetComp Extension</h1>
+        <p>An external Schema.org extension that described components from Computer Networks inspired by <a href="http://bro.org">Bro</a>.</p>
         <p>
           - <a href="https://lorisleiva.github.io/networkextension/">See all classes</a>
           <br>
