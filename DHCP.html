@@ -94,6 +94,38 @@
                         The mac address of a device, E.g. detected after a DHCP connection.
                     </td>
                 </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/assignedIpAddress">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/assignedIpAddress">assignedIpAddress</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/IpAddress" />
+                        <a href="https://lorisleiva.github.io/networkextension/IpAddress">IpAddress</a>
+
+                        <link property="domainIncludes" href="http://schema.org/DHCP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The IP Address assigned by the DHCP connection.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/leaseTime">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/leaseTime">leaseTime</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Time" />
+                        <a href="http://schema.org/Time">Time</a>
+
+                        <link property="domainIncludes" href="http://schema.org/DHCP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The IP Address's lease time.
+                    </td>
+                </tr>   
             <tr class="supertype">
                 <th class="supertype-name" colspan="3">
                     Properties from <a href="https://lorisleiva.github.io/networkextension/Service">Service</a>
@@ -116,6 +148,22 @@
                     </td>
                     <td class="prop-desc" property="rdfs:comment">
                         One or several connections associated with a particular end-point component, service or alert.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/transactionId">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/transactionId">transactionId</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Service">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        A random unique identifier chosen by the actors of this transaction.
                     </td>
                 </tr>   
             <tr class="supertype">

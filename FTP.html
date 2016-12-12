@@ -73,6 +73,194 @@
         <tbody class="supertype">
             <tr class="supertype">
                 <th class="supertype-name" colspan="3">
+                    Properties from <a href="https://lorisleiva.github.io/networkextension/FTP">FTP</a>
+                </th>
+            </tr>
+
+                <tr typeof="rdfs:Property" resource="http://schema.org/username">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/username">username</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                        <link property="domainIncludes" href="http://schema.org/FTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        User name for the current session.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/password">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/password">password</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                        <link property="domainIncludes" href="http://schema.org/FTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Password for the current session if captured.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/command">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/command">command</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/FTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        A command given by the client.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/argument">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/argument">argument</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/FTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Argument for the command if given.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/file">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/file">file</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/File" />
+                        <a href="https://lorisleiva.github.io/networkextension/File">File</a>
+
+                        <link property="domainIncludes" href="http://schema.org/FTP">
+                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                        <link property="domainIncludes" href="http://schema.org/Alert">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        File associated with that connection. E.g. for FTP, it represents the transfered file.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/replyCode">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/replyCode">replyCode</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                        <link property="domainIncludes" href="http://schema.org/FTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Reply code from the server in response to the command or request.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/replyMessage">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/replyMessage">replyMessage</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                        <link property="domainIncludes" href="http://schema.org/FTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Reply message from the server in response to the command or request.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/isPassiveMode">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/isPassiveMode">isPassiveMode</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Boolean" />
+                        <a href="http://schema.org/Boolean">Boolean</a>
+
+                        <link property="domainIncludes" href="http://schema.org/FTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Whether PASV mode is toggled for the control channel.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/passiveOriginatingIp">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/passiveOriginatingIp">passiveOriginatingIp</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/IpAddress" />
+                        <a href="https://lorisleiva.github.io/networkextension/IpAddress">IpAddress</a>
+
+                        <link property="domainIncludes" href="http://schema.org/FTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The host initiating the data connection.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/passiveRespondingIp">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/passiveRespondingIp">passiveRespondingIp</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/IpAddress" />
+                        <a href="https://lorisleiva.github.io/networkextension/IpAddress">IpAddress</a>
+
+                        <link property="domainIncludes" href="http://schema.org/FTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The host accepting the data connection.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/passiveRespondingPort">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/passiveRespondingPort">passiveRespondingPort</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/FTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The port at which the acceptor is listening for the data connection.
+                    </td>
+                </tr>   
+            <tr class="supertype">
+                <th class="supertype-name" colspan="3">
                     Properties from <a href="https://lorisleiva.github.io/networkextension/Service">Service</a>
                 </th>
             </tr>
@@ -93,6 +281,22 @@
                     </td>
                     <td class="prop-desc" property="rdfs:comment">
                         One or several connections associated with a particular end-point component, service or alert.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/transactionId">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/transactionId">transactionId</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Service">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        A random unique identifier chosen by the actors of this transaction.
                     </td>
                 </tr>   
             <tr class="supertype">

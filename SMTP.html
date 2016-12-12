@@ -98,6 +98,257 @@
                         Represent the depth of an item in a network transaction. E.g: <ul><li>For a SMTP connection: it counts the depth of the message transaction in a single connection where multiple messages were transfered.</li><li>For a HTTP connection: it represents the pipelined depth into the connection of this request/response transaction.</li><li>For a File: it depends on its source.</li></ul>
                     </td>
                 </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/file">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/file">file</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/File" />
+                        <a href="https://lorisleiva.github.io/networkextension/File">File</a>
+
+                        <link property="domainIncludes" href="http://schema.org/FTP">
+                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                        <link property="domainIncludes" href="http://schema.org/Alert">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        File associated with that connection. E.g. for FTP, it represents the transfered file.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/heloHeader">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/heloHeader">heloHeader</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+                            &nbsp;or<br>
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Contents of the Helo header.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/heloHeader">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/heloHeader">heloHeader</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+                            &nbsp;or<br>
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Contents of the Helo header.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/mailFromHeader">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/mailFromHeader">mailFromHeader</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Contents of the Mail From header.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/rcptToHeader">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/rcptToHeader">rcptToHeader</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Contents of the Rcpt To header.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/mailSender">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/mailSender">mailSender</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Contents of the From header.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/mailRecepient">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/mailRecepient">mailRecepient</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Contents of the To header.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/mailRecepientCc">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/mailRecepientCc">mailRecepientCc</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Contents of the CC header.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/replyTo">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/replyTo">replyTo</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Contents of the ReplyTo header.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/inReplyTo">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/inReplyTo">inReplyTo</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Contents of the In-Reply-To header.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/messageId">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/messageId">messageId</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Contents of the MsgID header.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/subject">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/subject">subject</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                        <link property="domainIncludes" href="http://schema.org/SSL">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The subject of an item. E.g. For SMTP or SSL connection, it represents the content of the Subject header.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/lastReply">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/lastReply">lastReply</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The last message the server sent to the client.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/path">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/path">path</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The message transmission path, as extracted from the headers.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/isWebmail">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/isWebmail">isWebmail</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Boolean" />
+                        <a href="http://schema.org/Boolean">Boolean</a>
+
+                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Indicates if the message was sent through a webmail interface.
+                    </td>
+                </tr>   
             <tr class="supertype">
                 <th class="supertype-name" colspan="3">
                     Properties from <a href="https://lorisleiva.github.io/networkextension/Service">Service</a>
@@ -120,6 +371,22 @@
                     </td>
                     <td class="prop-desc" property="rdfs:comment">
                         One or several connections associated with a particular end-point component, service or alert.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/transactionId">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/transactionId">transactionId</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Service">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        A random unique identifier chosen by the actors of this transaction.
                     </td>
                 </tr>   
             <tr class="supertype">

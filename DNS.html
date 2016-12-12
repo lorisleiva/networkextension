@@ -73,6 +73,237 @@
         <tbody class="supertype">
             <tr class="supertype">
                 <th class="supertype-name" colspan="3">
+                    Properties from <a href="https://lorisleiva.github.io/networkextension/DNS">DNS</a>
+                </th>
+            </tr>
+
+                <tr typeof="rdfs:Property" resource="http://schema.org/query">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/query">query</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/DNS">
+                        <link property="domainIncludes" href="http://schema.org/SearchAction">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        A sub property of instrument. The query used on this action.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/qclass">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/qclass">qclass</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/DNS">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The QCLASS value specifying the class of the DNS query.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/qclassName">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/qclassName">qclassName</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/DNS">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        A descriptive name for the class of the query.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/qtype">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/qtype">qtype</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/DNS">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        A QTYPE value specifying the type of the query.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/qtypeName">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/qtypeName">qtypeName</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/DNS">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        A descriptive name for the type of the query.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/rcode">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/rcode">rcode</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/DNS">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The response code value in DNS response messages.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/rcodeName">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/rcodeName">rcodeName</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/DNS">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        A descriptive name for the response code value.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/bitQR">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/bitQR">bitQR</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Boolean" />
+                        <a href="http://schema.org/Boolean">Boolean</a>
+
+                        <link property="domainIncludes" href="http://schema.org/DNS">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Whether the message is a query (False) or response (True).
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/bitAA">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/bitAA">bitAA</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Boolean" />
+                        <a href="http://schema.org/Boolean">Boolean</a>
+
+                        <link property="domainIncludes" href="http://schema.org/DNS">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The Authoritative Answer bit for response messages specifies that the responding name server is an authority for the domain name in the question section.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/bitTC">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/bitTC">bitTC</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Boolean" />
+                        <a href="http://schema.org/Boolean">Boolean</a>
+
+                        <link property="domainIncludes" href="http://schema.org/DNS">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The Truncation bit specifies if the message was truncated.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/bitRD">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/bitRD">bitRD</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Boolean" />
+                        <a href="http://schema.org/Boolean">Boolean</a>
+
+                        <link property="domainIncludes" href="http://schema.org/DNS">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The Recursion Desired bit indicates to a name server to recursively purse the query.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/bitRA">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/bitRA">bitRA</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Boolean" />
+                        <a href="http://schema.org/Boolean">Boolean</a>
+
+                        <link property="domainIncludes" href="http://schema.org/DNS">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The Recursion Available bit in a response message indicates if the name server supports recursive queries.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/queryAnswer">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/queryAnswer">queryAnswer</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/DNS">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Resource descriptions in answer of the query.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/rejected">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/rejected">rejected</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Boolean" />
+                        <a href="http://schema.org/Boolean">Boolean</a>
+
+                        <link property="domainIncludes" href="http://schema.org/DNS">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Whether the DNS query was rejected by the server.
+                    </td>
+                </tr>   
+            <tr class="supertype">
+                <th class="supertype-name" colspan="3">
                     Properties from <a href="https://lorisleiva.github.io/networkextension/Service">Service</a>
                 </th>
             </tr>
@@ -93,6 +324,22 @@
                     </td>
                     <td class="prop-desc" property="rdfs:comment">
                         One or several connections associated with a particular end-point component, service or alert.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/transactionId">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/transactionId">transactionId</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Service">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        A random unique identifier chosen by the actors of this transaction.
                     </td>
                 </tr>   
             <tr class="supertype">

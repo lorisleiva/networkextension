@@ -94,6 +94,88 @@
                         The status of an item.
                     </td>
                 </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/responseSize">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/responseSize">responseSize</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                        <link property="domainIncludes" href="http://schema.org/SSH">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Actual uncompressed content size of the response's body.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/connectionDirection">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/connectionDirection">connectionDirection</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/SSH">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Direction of the connection. If the client was a local host logging into an external host, this would be OUTBOUND. INBOUND would be set for the opposite situation.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/clientSoftware">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/clientSoftware">clientSoftware</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/SSH">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Software string given by the client in an SSH connection.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/serverSoftware">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/serverSoftware">serverSoftware</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/SSH">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Software string given by the server in an SSH connection.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/remoteLocation">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/remoteLocation">remoteLocation</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/GeoCoordinates" />
+                        <a href="http://schema.org/GeoCoordinates">GeoCoordinates</a>
+
+                        <link property="domainIncludes" href="http://schema.org/SSH">
+                        <link property="domainIncludes" href="http://schema.org/Alert">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The location of the remote endpoint.
+                    </td>
+                </tr>   
             <tr class="supertype">
                 <th class="supertype-name" colspan="3">
                     Properties from <a href="https://lorisleiva.github.io/networkextension/Service">Service</a>
@@ -116,6 +198,22 @@
                     </td>
                     <td class="prop-desc" property="rdfs:comment">
                         One or several connections associated with a particular end-point component, service or alert.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/transactionId">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/transactionId">transactionId</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Service">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        A random unique identifier chosen by the actors of this transaction.
                     </td>
                 </tr>   
             <tr class="supertype">

@@ -73,6 +73,60 @@
         <tbody class="supertype">
             <tr class="supertype">
                 <th class="supertype-name" colspan="3">
+                    Properties from <a href="https://lorisleiva.github.io/networkextension/DNP3">DNP3</a>
+                </th>
+            </tr>
+
+                <tr typeof="rdfs:Property" resource="http://schema.org/functionRequest">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/functionRequest">functionRequest</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/DNP3">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The name of the function message in the request.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/functionReply">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/functionReply">functionReply</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/DNP3">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The name of the function message in the reply.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/internalIndicationNumber">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/internalIndicationNumber">internalIndicationNumber</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/DNP3">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The response's "internal indication number".
+                    </td>
+                </tr>   
+            <tr class="supertype">
+                <th class="supertype-name" colspan="3">
                     Properties from <a href="https://lorisleiva.github.io/networkextension/Service">Service</a>
                 </th>
             </tr>
@@ -93,6 +147,22 @@
                     </td>
                     <td class="prop-desc" property="rdfs:comment">
                         One or several connections associated with a particular end-point component, service or alert.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/transactionId">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/transactionId">transactionId</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Service">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        A random unique identifier chosen by the actors of this transaction.
                     </td>
                 </tr>   
             <tr class="supertype">

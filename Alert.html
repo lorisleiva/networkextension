@@ -93,6 +93,211 @@
                         One or several connections associated with a particular end-point component, service or alert.
                     </td>
                 </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/file">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/file">file</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/File" />
+                        <a href="https://lorisleiva.github.io/networkextension/File">File</a>
+
+                        <link property="domainIncludes" href="http://schema.org/FTP">
+                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                        <link property="domainIncludes" href="http://schema.org/Alert">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        File associated with that connection. E.g. for FTP, it represents the transfered file.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/remoteLocation">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/remoteLocation">remoteLocation</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/GeoCoordinates" />
+                        <a href="http://schema.org/GeoCoordinates">GeoCoordinates</a>
+
+                        <link property="domainIncludes" href="http://schema.org/SSH">
+                        <link property="domainIncludes" href="http://schema.org/Alert">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The location of the remote endpoint.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/alertType">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/alertType">alertType</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Alert">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The type of the Alert.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/message">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/message">message</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Alert">
+                        <link property="domainIncludes" href="http://schema.org/Signature">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The human readable message for the item.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/subMessage">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/subMessage">subMessage</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Alert">
+                        <link property="domainIncludes" href="http://schema.org/Signature">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The human readable sub-message for the item.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/sourceIp">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/sourceIp">sourceIp</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/IpAddress" />
+                        <a href="https://lorisleiva.github.io/networkextension/IpAddress">IpAddress</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Alert">
+                        <link property="domainIncludes" href="http://schema.org/Signature">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The source address, if no connections are associated with the item.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/destinationIp">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/destinationIp">destinationIp</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/IpAddress" />
+                        <a href="https://lorisleiva.github.io/networkextension/IpAddress">IpAddress</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Alert">
+                        <link property="domainIncludes" href="http://schema.org/Signature">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        The destination address, if no connections are associated with the item.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/port">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/port">port</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Alert">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Associated port, if no connections are associated with the item.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/count">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/count">count</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Alert">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Counter or status code associated with a notification.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/action">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/action">action</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Alert">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Actions which have been applied to this alert.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/sourceIpWasDropped">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/sourceIpWasDropped">sourceIpWasDropped</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Boolean" />
+                        <a href="http://schema.org/Boolean">Boolean</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Alert">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Indicates if the source IP address was dropped and denied network access.
+                    </td>
+                </tr>   
+            <tr class="supertype">
+                <th class="supertype-name" colspan="3">
+                    Properties from <a href="https://lorisleiva.github.io/networkextension/NetworkNotification">NetworkNotification</a>
+                </th>
+            </tr>
+
+                <tr typeof="rdfs:Property" resource="http://schema.org/generatedAt">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/generatedAt">generatedAt</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/DateTime" />
+                        <a href="http://schema.org/DateTime">DateTime</a>
+
+                        <link property="domainIncludes" href="http://schema.org/NetworkNotification">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        An absolute time indicating when the notification occurred.
+                    </td>
+                </tr>   
             <tr class="supertype">
                 <th class="supertype-name" colspan="3">
                     Properties from <a href="https://lorisleiva.github.io/networkextension/NetworkComponent">NetworkComponent</a>
@@ -290,6 +495,38 @@
         </tbody>
     </table>
 
+        <br>
+        <p>
+            Instances of 
+            <a href="https://lorisleiva.github.io/networkextension/Alert">Alert</a> 
+            may appear as values for the following properties:
+        </p>
+
+        <table class="definition-table">
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>On Types</th>
+                    <th>Description</th>               
+                </tr>
+            </thead>
+
+            <tbody class="supertype">
+                <tr typeof="rdfs:Property" resource="http://schema.org/alertAssociated">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/alertAssociated">alertAssociated</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <a href="https://lorisleiva.github.io/networkextension/Signature">Signature</a>
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Alert associated with the signature event.
+                    </td>
+                </tr>   
+            </tbody>
+        </table>
 </div>      </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/lorisleiva">lorisleiva</a></p>

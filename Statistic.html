@@ -71,6 +71,162 @@
         <tbody class="supertype">
             <tr class="supertype">
                 <th class="supertype-name" colspan="3">
+                    Properties from <a href="https://lorisleiva.github.io/networkextension/Statistic">Statistic</a>
+                </th>
+            </tr>
+
+                <tr typeof="rdfs:Property" resource="http://schema.org/memoryUsed">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/memoryUsed">memoryUsed</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Statistic">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Amount of memory currently in use in MB.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/packetsProcessed">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/packetsProcessed">packetsProcessed</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Statistic">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Number of packets processed since the last statistic interval.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/packetsDropped">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/packetsDropped">packetsDropped</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Statistic">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Number of packets dropped since the last statistic interval.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/statisticLag">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/statisticLag">statisticLag</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Time" />
+                        <a href="http://schema.org/Time">Time</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Statistic">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Lag between the wall clock and packet timestamps.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/packetsLink">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/packetsLink">packetsLink</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Statistic">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Number of packets seen on the link since the last statistic interval.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/bytesReceived">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/bytesReceived">bytesReceived</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Statistic">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Number of bytes received since the last statistic interval.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/eventsProcessed">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/eventsProcessed">eventsProcessed</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Statistic">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Number of events that been processed since the last statistic interval.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/eventsQueued">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/eventsQueued">eventsQueued</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Statistic">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Number of events that been queued since the last statistic interval.
+                    </td>
+                </tr>   
+            <tr class="supertype">
+                <th class="supertype-name" colspan="3">
+                    Properties from <a href="https://lorisleiva.github.io/networkextension/NetworkNotification">NetworkNotification</a>
+                </th>
+            </tr>
+
+                <tr typeof="rdfs:Property" resource="http://schema.org/generatedAt">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/generatedAt">generatedAt</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/DateTime" />
+                        <a href="http://schema.org/DateTime">DateTime</a>
+
+                        <link property="domainIncludes" href="http://schema.org/NetworkNotification">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        An absolute time indicating when the notification occurred.
+                    </td>
+                </tr>   
+            <tr class="supertype">
+                <th class="supertype-name" colspan="3">
                     Properties from <a href="https://lorisleiva.github.io/networkextension/NetworkComponent">NetworkComponent</a>
                 </th>
             </tr>

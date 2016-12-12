@@ -98,6 +98,316 @@
                         Represent the depth of an item in a network transaction. E.g: <ul><li>For a SMTP connection: it counts the depth of the message transaction in a single connection where multiple messages were transfered.</li><li>For a HTTP connection: it represents the pipelined depth into the connection of this request/response transaction.</li><li>For a File: it depends on its source.</li></ul>
                     </td>
                 </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/username">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/username">username</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                        <link property="domainIncludes" href="http://schema.org/FTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        User name for the current session.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/password">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/password">password</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                        <link property="domainIncludes" href="http://schema.org/FTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Password for the current session if captured.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/replyCode">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/replyCode">replyCode</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                        <link property="domainIncludes" href="http://schema.org/FTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Reply code from the server in response to the command or request.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/replyMessage">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/replyMessage">replyMessage</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                        <link property="domainIncludes" href="http://schema.org/FTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Reply message from the server in response to the command or request.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/httpMethod">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/httpMethod">httpMethod</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                        <link property="domainIncludes" href="http://schema.org/EntryPoint">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        An HTTP method that specifies the appropriate HTTP method for a request to an HTTP EntryPoint. Values are capitalized strings as used in HTTP.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/hostHeader">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/hostHeader">hostHeader</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Value of the HOST header.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/uri">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/uri">uri</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        URI used in the request.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/referrer">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/referrer">referrer</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Value of the referrer header.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/userAgent">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/userAgent">userAgent</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Value of the User-Agent header from the client.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/requestSize">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/requestSize">requestSize</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Actual uncompressed content size of the request's body.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/responseSize">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/responseSize">responseSize</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                        <link property="domainIncludes" href="http://schema.org/SSH">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Actual uncompressed content size of the response's body.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/httpTag">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/httpTag">httpTag</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Indicators of various attributes discovered and related to a particular request/response pair.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/originatingFile">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/originatingFile">originatingFile</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/File" />
+                        <a href="https://lorisleiva.github.io/networkextension/File">File</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Files associated with the request.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/respondingFile">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/respondingFile">respondingFile</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/File" />
+                        <a href="https://lorisleiva.github.io/networkextension/File">File</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Files associated with the response.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/proxyHeader">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/proxyHeader">proxyHeader</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Headers that may indicate if the request was proxied.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/clientHeader">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/clientHeader">clientHeader</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        HTTP header names sent by the client.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/serverHeader">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/serverHeader">serverHeader</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        HTTP header names sent by the server.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/uriVariables">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/uriVariables">uriVariables</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Variable names from the URI.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/cookieVariables">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/cookieVariables">cookieVariables</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Variable names extracted from cookies.
+                    </td>
+                </tr>   
             <tr class="supertype">
                 <th class="supertype-name" colspan="3">
                     Properties from <a href="https://lorisleiva.github.io/networkextension/Service">Service</a>
@@ -120,6 +430,22 @@
                     </td>
                     <td class="prop-desc" property="rdfs:comment">
                         One or several connections associated with a particular end-point component, service or alert.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/transactionId">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/transactionId">transactionId</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Number" />
+                        <a href="http://schema.org/Number">Number</a>
+
+                        <link property="domainIncludes" href="http://schema.org/Service">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        A random unique identifier chosen by the actors of this transaction.
                     </td>
                 </tr>   
             <tr class="supertype">
