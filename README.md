@@ -15,7 +15,7 @@ You can browse through the various classes and properties of the extension via t
 
 To design this extension with maximum flexibility, some python scripts have been developped to auto-generate the RDFA file and the entire documentation from a `Vocabulary` python's class.
 
-If you want to extends the Schema.org vocabulary with your own extension, feel free to use those scripts. You can learn more about them if the following documentation file: TODO
+If you want to extends the Schema.org vocabulary with your own extension, feel free to use those scripts. You can learn more about them if the following documentation file: [Define your own vocabulary](/docs/define-vocabulary.md).
 
 [documentation]: https://lorisleiva.github.io/networkextension
 [Bro official website]: https://bro.org
