@@ -1,5 +1,5 @@
 # Generate the documentation
-This documentation explains how to use your defined vocabulary to auto-generate a documentation website using the `voc2doc.py` script.
+This documentation explains how to use your [defined vocabulary](/docs/define-vocabulary.md) to auto-generate a documentation website using the `voc2doc.py` script.
 
 ## Make your vocabulary accessible
 
@@ -9,6 +9,8 @@ Wrap your vocabulary definition in a function to access it in the `voc2doc.py` f
 from netcomp import getVocabulary
 voc = getVocabulary()
 ```
+
+Check the [netcomp.py](/scripts/netcomp.py) vocabulary definition.
 
 ## Set up the script
 
