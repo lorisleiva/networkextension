@@ -44,4 +44,15 @@ You will notice two things:
 | Method and arguments          | Comment                                             |
 | ----------------------------- | --------------------------------------------------- |
 | `comment(description)`        | Gives a description to the class. This will render in the documentation as well as in the RDFA file as a `rdfs:comment` property |
-| `subClassOf(parentClassName)` | Defines the parent class by giving its name. If the parent class has not been defined yet, it will be added from documentation purposes only.<br>(Equivalent to `addSchemaClass(parentClassName, False)`).<br>This will render in the documentation as the class hierarchy and in the RDFA file as the `rdfs:subClassOf` property. |
+| `subClassOf(parentClassName)` | Defines the parent class by giving its name. If the parent class has not been defined yet, it will be added for documentation purposes only.<br>(Equivalent to `addSchemaClass(parentClassName, False)`). If it is defined later on, the class will be updated accordingly.<br>This will render in the documentation as the class hierarchy and in the RDFA file as the `rdfs:subClassOf` property. |
+
+### Methods available to detail a property:
+
+| Method and arguments          | Comment                                             |
+| ----------------------------- | --------------------------------------------------- |
+| `comment(description)`        | Gives a description to the property. This will render in the documentation as well as in the RDFA file as a `rdfs:comment` property |
+| `domainIncludes(domainName)`  | Adds the property to a class (domain). You can use this methods multiples times if a property is defined is multiple classes.<br>This will render in both the documentation and the RDFA file as the `http://schema.org/domainIncludes` property. |
+| `rangeIncludes(rangeName)`    | Adds a type of value (range) that the property can be set as. You can use this methods multiples times if a property has multiple types of value.<br>This will render in both the documentation and the RDFA file as the `http://schema.org/rangeIncludes` property. |
+| `inverseOf(inversePropertyName)` | Defines the inverse relationship of the property.<br>This will render in both the documentation and the RDFA file as the `http://schema.org/inverseOf` property. |
+
+Just like in the `subClassOf()` method, if the class given to the methods `domainIncludes()`, `rangeIncludes()` and `inverseOf()` has not been yet defined, then it will be added for documentation purposes only.<br>(Equivalent to `addSchemaClass(parentClassName, False)`). And if it is defined later on, the class will be updated accordingly.
