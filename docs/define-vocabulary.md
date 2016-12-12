@@ -32,10 +32,16 @@ You will notice two things:
 
 ### Methods available to create a new element:
 
-| Method and arguments                       | Comment                                             |
-| ------------------------------------------ | --------------------------------------------------- |
-| `addClass(name)`                           | Defines your own class with a given unique name.    |
-| `addProperty(name)`                        | Defines your own property with a given unique name. |
+| Method and arguments               | Comment                                             |
+| ---------------------------------- | --------------------------------------------------- |
+| `addClass(name)`                   | Defines your own class with a given unique name.    |
+| `addProperty(name)`                | Defines your own property with a given unique name. |
 | `addSchemaClass(name, extends)`    | <strong>if extends is False (default):</strong> Adds a class from Schema.org for documentation purposes only. It will show the class on the tree hierachy but it will not have its own page. The class will also not appear on the RDFA file.<br><br><strong>If extends is True:</strong> Extends the class from Schema.org. The class definition will appear on the RDFA file and have its own documentation page with a link to the core documentation. |
 | `addSchemaProperty(name, extends)` | <strong>if extends is False (default):</strong> Adds a property from Schema.org for documentation purposes only. It will show the property on each appropriate class page but the link will redirect to Schema.org. The property will also not appear on the RDFA file.<br><br><strong>If extends is True:</strong> Extends the property from Schema.org. The property definition will appear on the RDFA file and have its own documentation page with a link to the core documentation. |
 
+### Methods available to detail a class:
+
+| Method and arguments          | Comment                                             |
+| ----------------------------- | --------------------------------------------------- |
+| `comment(description)`        | Gives a description to the class. This will render in the documentation as well as in the RDFA file as a `rdfs:comment` property |
+| `subClassOf(parentClassName)` | Defines the parent class by giving its name. If the parent class has not been defined yet, it will be added from documentation purposes only.<br>(Equivalent to `addSchemaClass(parentClassName, False)`).<br>This will render in the documentation as the class hierarchy and in the RDFA file as the `rdfs:subClassOf` property. |
