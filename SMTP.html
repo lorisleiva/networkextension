@@ -98,10 +98,10 @@
                         Represent the depth of an item in a network transaction. E.g: <ul><li>For a SMTP connection: it counts the depth of the message transaction in a single connection where multiple messages were transfered.</li><li>For a HTTP connection: it represents the pipelined depth into the connection of this request/response transaction.</li><li>For a File: it depends on its source.</li></ul>
                     </td>
                 </tr>   
-                <tr typeof="rdfs:Property" resource="http://schema.org/file">
+                <tr typeof="rdfs:Property" resource="http://schema.org/fileAssociated">
                     <th class="prop-nam" scope="row">
                         <code property="rdfs:label">
-                            <a href="https://lorisleiva.github.io/networkextension/file">file</a>
+                            <a href="https://lorisleiva.github.io/networkextension/fileAssociated">fileAssociated</a>
                         </code>
                     </th>
                     <td class="prop-ect">
@@ -113,7 +113,7 @@
                         <link property="domainIncludes" href="http://schema.org/Alert">
                     </td>
                     <td class="prop-desc" property="rdfs:comment">
-                        File associated with that connection. E.g. for FTP, it represents the transfered file.
+                        File associated with the item. E.g. for FTP, it represents the transfered file.
                     </td>
                 </tr>   
                 <tr typeof="rdfs:Property" resource="http://schema.org/heloHeader">
