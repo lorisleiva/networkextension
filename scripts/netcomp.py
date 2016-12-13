@@ -535,8 +535,8 @@ def getVocabulary():
     voc.domainIncludes('FTP')
     voc.rangeIncludes('Text')
 
-    voc.addProperty('file')
-    voc.comment('File associated with that connection. E.g. for FTP, it represents the transfered file.')
+    voc.addProperty('fileAssociated')
+    voc.comment('File associated with the item. E.g. for FTP, it represents the transfered file.')
     voc.domainIncludes('FTP')
     voc.domainIncludes('SMTP')
     voc.domainIncludes('Alert')
