@@ -213,6 +213,7 @@ def getVocabulary():
 
     voc.addProperty('bytesMissed')
     voc.comment('Number of bytes that were completely missed during the process of analysis. E.g. due to dropped packets.')
+    voc.domainIncludes('Connection')
     voc.domainIncludes('File')
     voc.rangeIncludes('Number')
 
