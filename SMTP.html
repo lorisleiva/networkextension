@@ -116,24 +116,21 @@
                         File associated with the item. E.g. for FTP, it represents the transfered file.
                     </td>
                 </tr>   
-                <tr typeof="rdfs:Property" resource="http://schema.org/heloHeader">
+                <tr typeof="rdfs:Property" resource="http://schema.org/userAgent">
                     <th class="prop-nam" scope="row">
                         <code property="rdfs:label">
-                            <a href="https://lorisleiva.github.io/networkextension/heloHeader">heloHeader</a>
+                            <a href="https://lorisleiva.github.io/networkextension/userAgent">userAgent</a>
                         </code>
                     </th>
                     <td class="prop-ect">
                         <link property="rangeIncludes" href="http://schema.org/Text" />
                         <a href="http://schema.org/Text">Text</a>
-                            &nbsp;or<br>
-                        <link property="rangeIncludes" href="http://schema.org/Text" />
-                        <a href="http://schema.org/Text">Text</a>
 
-                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                        <link property="domainIncludes" href="http://schema.org/HTTP">
                         <link property="domainIncludes" href="http://schema.org/SMTP">
                     </td>
                     <td class="prop-desc" property="rdfs:comment">
-                        Contents of the Helo header.
+                        Value of the User-Agent header from the client.
                     </td>
                 </tr>   
                 <tr typeof="rdfs:Property" resource="http://schema.org/heloHeader">
@@ -145,15 +142,27 @@
                     <td class="prop-ect">
                         <link property="rangeIncludes" href="http://schema.org/Text" />
                         <a href="http://schema.org/Text">Text</a>
-                            &nbsp;or<br>
-                        <link property="rangeIncludes" href="http://schema.org/Text" />
-                        <a href="http://schema.org/Text">Text</a>
 
-                        <link property="domainIncludes" href="http://schema.org/SMTP">
                         <link property="domainIncludes" href="http://schema.org/SMTP">
                     </td>
                     <td class="prop-desc" property="rdfs:comment">
                         Contents of the Helo header.
+                    </td>
+                </tr>   
+                <tr typeof="rdfs:Property" resource="http://schema.org/dateHeader">
+                    <th class="prop-nam" scope="row">
+                        <code property="rdfs:label">
+                            <a href="https://lorisleiva.github.io/networkextension/dateHeader">dateHeader</a>
+                        </code>
+                    </th>
+                    <td class="prop-ect">
+                        <link property="rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">Text</a>
+
+                        <link property="domainIncludes" href="http://schema.org/SMTP">
+                    </td>
+                    <td class="prop-desc" property="rdfs:comment">
+                        Contents of the Date header.
                     </td>
                 </tr>   
                 <tr typeof="rdfs:Property" resource="http://schema.org/mailFromHeader">

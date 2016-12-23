@@ -38,10 +38,10 @@
     id="mainContent" 
     vocab="http://schema.org/" 
     typeof="rdfs:Property" 
-    resource="http://schema.org/userAgent"
+    resource="http://schema.org/serverName"
 >
 
-    <h1 property="rdfs:label" class="page-title">userAgent</h1>
+    <h1 property="rdfs:label" class="page-title">serverName</h1>
 
     <h4>
         <span class='breadcrumbs'>
@@ -49,11 +49,11 @@
             &nbsp;&gt;&nbsp;
             <a href="http://meta.schema.org/Property">Property</a>
             &nbsp;&gt;&nbsp;
-            <a href="https://lorisleiva.github.io/networkextension/userAgent">userAgent</a>
+            <a href="https://lorisleiva.github.io/networkextension/serverName">serverName</a>
         </span>
     </h4>
 
-    <div property="rdfs:comment">Value of the User-Agent header from the client.</div>
+    <div property="rdfs:comment">Value of the Server Name Indicator SSL/TLS extension. It indicates the server name that the client was requesting.</div>
 
 
     <table class="definition-table">
@@ -64,7 +64,7 @@
             <tr>
                 <td>
                         <link property="rangeIncludes" href="http://schema.org/Text">
-                        <a href="http://schema.org/Text" title="The 'userAgent' property has values that include instances of the 'Text' type.">
+                        <a href="http://schema.org/Text" title="The 'serverName' property has values that include instances of the 'Text' type.">
                             Text
                         </a>
                 </td>
@@ -79,14 +79,9 @@
         <tbody>
             <tr>
                 <td>
-                        <link property="domainIncludes" href="http://schema.org/HTTP">
-                        <a href="https://lorisleiva.github.io/networkextension/HTTP" title="The 'userAgent' property is used on the 'HTTP' type.">
-                            HTTP
-                        </a>
-                            <br>
-                        <link property="domainIncludes" href="http://schema.org/SMTP">
-                        <a href="https://lorisleiva.github.io/networkextension/SMTP" title="The 'userAgent' property is used on the 'SMTP' type.">
-                            SMTP
+                        <link property="domainIncludes" href="http://schema.org/SSL">
+                        <a href="https://lorisleiva.github.io/networkextension/SSL" title="The 'serverName' property is used on the 'SSL' type.">
+                            SSL
                         </a>
                 </td>
             </tr>
