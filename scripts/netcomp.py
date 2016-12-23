@@ -599,6 +599,7 @@ def getVocabulary():
     voc.addProperty('userAgent')
     voc.comment('Value of the User-Agent header from the client.')
     voc.domainIncludes('HTTP')
+    voc.domainIncludes('SMTP')
     voc.rangeIncludes('Text')
 
     voc.addProperty('requestSize')
@@ -657,8 +658,8 @@ def getVocabulary():
     voc.domainIncludes('SMTP')
     voc.rangeIncludes('Text')
 
-    voc.addProperty('heloHeader')
-    voc.comment('Contents of the Helo header.')
+    voc.addProperty('dateHeader')
+    voc.comment('Contents of the Date header.')
     voc.domainIncludes('SMTP')
     voc.rangeIncludes('Text')
 
@@ -746,6 +747,11 @@ def getVocabulary():
 
     voc.addProperty('cipher')
     voc.comment('SSL/TLS cipher suite the server chose.')
+    voc.domainIncludes('SSL')
+    voc.rangeIncludes('Text')
+
+    voc.addProperty('serverName')
+    voc.comment('Value of the Server Name Indicator SSL/TLS extension. It indicates the server name that the client was requesting.')
     voc.domainIncludes('SSL')
     voc.rangeIncludes('Text')
 
